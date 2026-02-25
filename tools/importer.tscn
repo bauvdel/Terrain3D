@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://blaieaqp413k7"]
+
+[ext_resource type="Script" uid="uid://cib2rig7vup10" path="res://addons/terrain_3d/tools/importer.gd" id="1_60b8f"]
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_p55u0"]
+_shader_parameters = {
+&"auto_base_texture": 0,
+&"auto_height_reduction": 0.1,
+&"auto_overlay_texture": 1,
+&"auto_slope": 1.0,
+&"bias_distance": 512.0,
+"blend_sharpness": 0.87,
+&"depth_blur": 0.0,
+&"flat_terrain_normals": false,
+&"mipmap_bias": 1.0,
+&"shader_uniforms": null,
+&"shader_uniforms::auto_shader": null,
+&"shader_uniforms::general": null,
+&"shader_uniforms::mipmaps": null
+}
+world_background = 0
+auto_shader_enabled = true
+show_checkered = true
+show_colormap = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rvqy"]
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_7je72"]
+generated_type = 1
+height_offset = 0.5
+density = 10.0
+material_override = SubResource("StandardMaterial3D_8rvqy")
+last_lod = 0
+last_shadow_lod = 0
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_op32e"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_7je72")])
+
+[node name="Importer" type="Terrain3D" unique_id=1203170634]
+data_directory = "res://world/terrain"
+material = SubResource("Terrain3DMaterial_p55u0")
+assets = SubResource("Terrain3DAssets_op32e")
+mesh_lods = 8
+vertex_spacing = 1.51
+displacement_sharpness = 0.5
+show_checkered = true
+show_colormap = true
+top_level = true
+script = ExtResource("1_60b8f")
+color_file_name = "F:/Reach/world/textures/white.png"
+import_position = Vector2i(-4096, -4096)
+import_scale = 1.25
+destination_directory = "res://world/terrain"
+metadata/_edit_lock_ = true

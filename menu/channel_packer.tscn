@@ -1,0 +1,792 @@
+[gd_scene format=3 uid="uid://nud6dwjcnj5v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mbo40"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.28, 0.28, 0.28, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_pxdc5"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_mbo40"]
+font_color = Color(1, 1, 1, 0.705882)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cb0xf"]
+bg_color = Color(0.147, 0.168, 0.203, 1)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.5655, 0.582, 0.6095, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7qdas"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2eo1k"]
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_wnxik"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nt754"]
+font_size = 24
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_47nos"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_mbo40"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3c3a7"]
+font_size = 24
+
+[node name="Window" type="Window" unique_id=1619054289]
+oversampling_override = 1.0
+title = "Terrain3D Channel Packer"
+initial_position = 1
+size = Vector2i(1446, 730)
+wrap_controls = true
+always_on_top = true
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=618366308]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer" unique_id=362927657]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer" unique_id=1417822115]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 0
+
+[node name="FlowContainer" type="HFlowContainer" parent="PanelContainer/ScrollContainer/MarginContainer" unique_id=876139872]
+layout_mode = 2
+
+[node name="Albedo_Height" type="PanelContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer" unique_id=1477342534]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_mbo40")
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height" unique_id=1847460471]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="AlbHtLabel" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox" unique_id=1568311249]
+layout_mode = 2
+text = "1. Albedo + Height Texture"
+label_settings = SubResource("LabelSettings_pxdc5")
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox" unique_id=1122214776]
+layout_mode = 2
+
+[node name="AlbedoVBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox" unique_id=547341191]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="AlbedoLabel" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/AlbedoVBox" unique_id=1942693599]
+layout_mode = 2
+text = "Albedo Texture"
+label_settings = SubResource("LabelSettings_mbo40")
+
+[node name="AlbedoFileHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/AlbedoVBox" unique_id=924998132]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/AlbedoVBox/AlbedoFileHBox" unique_id=475661878]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PickButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/AlbedoVBox/AlbedoFileHBox" unique_id=1583376071]
+layout_mode = 2
+
+[node name="ClearButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/AlbedoVBox/AlbedoFileHBox" unique_id=1633196197]
+layout_mode = 2
+
+[node name="AlbedoMapHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/AlbedoVBox" unique_id=1116025544]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Panel" type="Panel" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/AlbedoVBox/AlbedoMapHBox" unique_id=835423883]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_cb0xf")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/AlbedoVBox/AlbedoMapHBox/Panel" unique_id=481739573]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="TextureButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/AlbedoVBox/AlbedoMapHBox/Panel" unique_id=1470679885]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7qdas")
+
+[node name="AlbedoSize" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/AlbedoVBox/AlbedoMapHBox/Panel" unique_id=838850264]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -18.5
+offset_top = -23.0
+offset_right = 18.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "(0, 0)"
+label_settings = SubResource("LabelSettings_2eo1k")
+horizontal_alignment = 1
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/AlbedoVBox/AlbedoMapHBox" unique_id=1654977568]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 5
+
+[node name="LuminanceAsHeightButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/AlbedoVBox/AlbedoMapHBox/VBox" unique_id=834330659]
+unique_name_in_owner = true
+layout_mode = 2
+text = " Generate Height from Luminance"
+icon_alignment = 2
+
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox" unique_id=1361200241]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HeightVBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox" unique_id=969433116]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="HeightLabel" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox" unique_id=987124316]
+layout_mode = 2
+text = "Height Texture"
+label_settings = SubResource("LabelSettings_mbo40")
+
+[node name="HeightFileHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox" unique_id=1155680781]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightFileHBox" unique_id=1896606985]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PickButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightFileHBox" unique_id=1431134004]
+layout_mode = 2
+
+[node name="ClearButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightFileHBox" unique_id=288258263]
+layout_mode = 2
+
+[node name="HeightMapHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox" unique_id=72025145]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Panel" type="Panel" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox" unique_id=1106641003]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_cb0xf")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox/Panel" unique_id=2085308261]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="TextureButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox/Panel" unique_id=1927008787]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7qdas")
+
+[node name="HeightSize" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox/Panel" unique_id=1355469060]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+offset_right = 40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "(0, 0)"
+label_settings = SubResource("LabelSettings_2eo1k")
+horizontal_alignment = 1
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox" unique_id=1109512318]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 5
+
+[node name="ChannelHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox/VBox" unique_id=1597987406]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="HeightChannelLabel" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox/VBox/ChannelHBox" unique_id=1203054363]
+layout_mode = 2
+text = " Source Channel: "
+horizontal_alignment = 2
+
+[node name="HeightChannelR" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox/VBox/ChannelHBox" unique_id=618848829]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_wnxik")
+text = "R"
+
+[node name="HeightChannelB" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox/VBox/ChannelHBox" unique_id=803509269]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wnxik")
+text = "G"
+
+[node name="HeightChannelG" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox/VBox/ChannelHBox" unique_id=1590365441]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wnxik")
+text = "B"
+
+[node name="HeightChannelA" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox/VBox/ChannelHBox" unique_id=1440245057]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_wnxik")
+text = "A"
+
+[node name="ConvertDepthToHeight" type="CheckBox" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox/VBox" unique_id=1953495515]
+unique_name_in_owner = true
+layout_mode = 2
+text = " Convert Depth to Height"
+icon_alignment = 2
+
+[node name="NormalizeHeight" type="CheckBox" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox/HeightMapHBox/VBox" unique_id=1013493028]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Normalize Height"
+icon_alignment = 2
+
+[node name="Spacer" type="Control" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Albedo_Height/VBox/HeightVBox" unique_id=648575863]
+layout_mode = 2
+
+[node name="Normal_Roughness" type="PanelContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer" unique_id=545790689]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_mbo40")
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness" unique_id=1472377473]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="NrmRghLabel" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox" unique_id=181541393]
+layout_mode = 2
+text = "2. Normal + Roughness Texture"
+label_settings = SubResource("LabelSettings_nt754")
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox" unique_id=341344874]
+layout_mode = 2
+
+[node name="NormalVBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox" unique_id=1747335350]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="NormalLabel" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox" unique_id=1472631608]
+layout_mode = 2
+text = "Normal Texture"
+label_settings = SubResource("LabelSettings_mbo40")
+
+[node name="NormalFileHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox" unique_id=502550369]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox/NormalFileHBox" unique_id=1208392110]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PickButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox/NormalFileHBox" unique_id=1408282327]
+layout_mode = 2
+
+[node name="ClearButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox/NormalFileHBox" unique_id=2126499499]
+layout_mode = 2
+
+[node name="NormalMapHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox" unique_id=2119731393]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Panel" type="Panel" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox/NormalMapHBox" unique_id=365192614]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_cb0xf")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox/NormalMapHBox/Panel" unique_id=1907510140]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="TextureButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox/NormalMapHBox/Panel" unique_id=1085087506]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7qdas")
+
+[node name="NormalSize" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox/NormalMapHBox/Panel" unique_id=923831632]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -18.5
+offset_top = -23.0
+offset_right = 18.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "(0, 0)"
+label_settings = SubResource("LabelSettings_2eo1k")
+horizontal_alignment = 1
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox/NormalMapHBox" unique_id=907458820]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 5
+
+[node name="InvertGreenChannelCheckBox" type="CheckBox" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox/NormalMapHBox/VBox" unique_id=783246589]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "This setting determines if the normal map is +Y up (OpenGL) or down (DirectX) on the green channel. Some engines like Unreal Engine use DirectX normal maps. Godot uses OpenGL. This option inverts the green channel."
+text = " Convert DirectX to OpenGL"
+
+[node name="AlignNormalsCheckBox" type="CheckBox" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/NormalVBox/NormalMapHBox/VBox" unique_id=224278781]
+unique_name_in_owner = true
+layout_mode = 2
+text = " Orthoganolise Normals"
+
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox" unique_id=1755917228]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RoughnessVBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox" unique_id=2048932504]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="RoughnessLabel" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox" unique_id=1323735103]
+layout_mode = 2
+text = "Roughness Texture"
+label_settings = SubResource("LabelSettings_mbo40")
+
+[node name="RoughnessFileHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox" unique_id=2117855531]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessFileHBox" unique_id=874292480]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PickButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessFileHBox" unique_id=1200797261]
+layout_mode = 2
+
+[node name="ClearButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessFileHBox" unique_id=1399957778]
+layout_mode = 2
+
+[node name="RoughnessMapHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox" unique_id=1632977079]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Panel" type="Panel" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessMapHBox" unique_id=1883150996]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_cb0xf")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessMapHBox/Panel" unique_id=1002287289]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="TextureButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessMapHBox/Panel" unique_id=1870347779]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7qdas")
+
+[node name="RoughnessSize" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessMapHBox/Panel" unique_id=1340552746]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+offset_right = 40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "(0, 0)"
+label_settings = SubResource("LabelSettings_2eo1k")
+horizontal_alignment = 1
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessMapHBox" unique_id=1409187709]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 5
+
+[node name="ChannelHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessMapHBox/VBox" unique_id=165316658]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="RoughnessChannelLabel" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessMapHBox/VBox/ChannelHBox" unique_id=815226644]
+layout_mode = 2
+text = " Source Channel: "
+
+[node name="RoughnessChannelR" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessMapHBox/VBox/ChannelHBox" unique_id=281334657]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_47nos")
+text = "R"
+
+[node name="RoughnessChannelG" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessMapHBox/VBox/ChannelHBox" unique_id=392256895]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_47nos")
+text = "G"
+
+[node name="RoughnessChannelB" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessMapHBox/VBox/ChannelHBox" unique_id=1184743912]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_47nos")
+text = "B"
+
+[node name="RoughnessChannelA" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessMapHBox/VBox/ChannelHBox" unique_id=162826070]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_47nos")
+text = "A"
+
+[node name="InvertSmoothCheckBox" type="CheckBox" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/RoughnessVBox/RoughnessMapHBox/VBox" unique_id=1513580729]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Some engines like Unity use Smoothness maps instead of Roughness maps like Godot Engine. This option inverts the map."
+text = " Convert Smooth to Rough"
+
+[node name="HSeparator3" type="HSeparator" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox" unique_id=23695189]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="AOVBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox" unique_id=1447417960]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="AOLabel" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox" unique_id=815401003]
+layout_mode = 2
+text = "AO Texture (Opt)"
+label_settings = SubResource("LabelSettings_mbo40")
+
+[node name="AOFileHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox" unique_id=961867382]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOFileHBox" unique_id=2110981826]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PickButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOFileHBox" unique_id=505401217]
+layout_mode = 2
+
+[node name="ClearButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOFileHBox" unique_id=1700475383]
+layout_mode = 2
+
+[node name="AOMapHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox" unique_id=1320872306]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Panel" type="Panel" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOMapHBox" unique_id=488346666]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_cb0xf")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOMapHBox/Panel" unique_id=979115788]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="TextureButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOMapHBox/Panel" unique_id=1151605128]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7qdas")
+
+[node name="AOSize" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOMapHBox/Panel" unique_id=340202677]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -18.5
+offset_top = -23.0
+offset_right = 18.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "(0, 0)"
+label_settings = SubResource("LabelSettings_2eo1k")
+horizontal_alignment = 1
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOMapHBox" unique_id=493261735]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 5
+
+[node name="ChannelHBox" type="HBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOMapHBox/VBox" unique_id=610610834]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="AOChannelLabel" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOMapHBox/VBox/ChannelHBox" unique_id=1203044166]
+layout_mode = 2
+text = " Source Channel: "
+horizontal_alignment = 2
+
+[node name="AOChannelR" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOMapHBox/VBox/ChannelHBox" unique_id=50079026]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_mbo40")
+text = "R"
+
+[node name="AOChannelG" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOMapHBox/VBox/ChannelHBox" unique_id=230950998]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_mbo40")
+text = "G"
+
+[node name="AOChannelB" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOMapHBox/VBox/ChannelHBox" unique_id=1937560660]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_mbo40")
+text = "B"
+
+[node name="AOChannelA" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox/AOMapHBox/VBox/ChannelHBox" unique_id=119972158]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_mbo40")
+text = "A"
+
+[node name="Spacer" type="Control" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Normal_Roughness/VBox/AOVBox" unique_id=655351352]
+layout_mode = 2
+
+[node name="Packing" type="PanelContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer" unique_id=1478863845]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_mbo40")
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Packing" unique_id=490092905]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PackingLabel" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Packing/VBox" unique_id=1763466344]
+layout_mode = 2
+text = "3. Pack Textures"
+label_settings = SubResource("LabelSettings_3c3a7")
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Packing/VBox" unique_id=287318701]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Packing/VBox" unique_id=1404688047]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ResizeToggle" type="CheckBox" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Packing/VBox/VBox" unique_id=1912578583]
+unique_name_in_owner = true
+layout_mode = 2
+text = " Resize Packed Image"
+
+[node name="ResizeOptionBox" type="SpinBox" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Packing/VBox/VBox" unique_id=1860539640]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+tooltip_text = "A value of 0 disables resizing."
+min_value = 128.0
+max_value = 4096.0
+step = 128.0
+value = 1024.0
+
+[node name="GenerateMipmapsCheckBox" type="CheckBox" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Packing/VBox/VBox" unique_id=737622828]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "Generate Mipmaps"
+
+[node name="HighQualityCheckBox" type="CheckBox" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Packing/VBox/VBox" unique_id=629475921]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Import High Quality"
+
+[node name="Instructions" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Packing/VBox" unique_id=691864658]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "You can pack the albedo, the normal, or both."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PackButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Packing/VBox" unique_id=1205427466]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Pack textures as..."
+
+[node name="StatusLabel" type="Label" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Packing/VBox" unique_id=1821476250]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CloseButton" type="Button" parent="PanelContainer/ScrollContainer/MarginContainer/FlowContainer/Packing/VBox" unique_id=1097593939]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Close"
